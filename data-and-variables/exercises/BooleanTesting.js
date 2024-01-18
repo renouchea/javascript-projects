@@ -28,3 +28,7 @@ if (num % 2 === 0) {
 else {
     console.log("we");
 }
+
+const input = require('readline-sync');
+	let name = input.question("Enter your name: ");
+	console.log ("Hello," + name + "!");
