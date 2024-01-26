@@ -28,7 +28,7 @@ function askForNumber() {
   numMeals = input.question("How many meals would you like to make?");
   
   /// CODE YOUR SOLUTION TO PART B here ///
- while (numMeals > 6|| numMeals < 1){
+ while (numMeals > 6 || numMeals < 1){
   numMeals = input.question ("Invaid!Put number of meal from 1 to 6")
 }
   return numMeals;

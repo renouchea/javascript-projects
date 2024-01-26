@@ -1,0 +1,75 @@
+// makeLine(size) function
+
+function makeLine(size) {
+  let line = '';
+  for (let i = 0; i < size; i++) {
+    line += '#';
+  }
+  return line;
+};
+console.log (makeLine(5));
+
+// my own parctice for exercise 1
+
+function makeLinePractice (size1) {
+    let linenum = '';
+    for (let i=0; i<size1;i++) {
+    linenum += '$';
+    }
+    return linenum;
+}
+console.log (makeLinePractice(10)); /// why it prints: Undefined ??? Answer: I forget to write "return linenum" in the fucntion. 
+
+//makeSquare(size) function
+
+function makeSquare(size) {
+    let square = '';
+   for (i = 0 ; i<size ; i++) {
+    square=`${square}\n${makeLine(size)}`
+    }
+    return square;
+}
+console.log (makeSquare(7));
+
+//makeRectangle(width, height) function 
+
+function makeRectangle(width, height) {
+  let rectangle = '';
+  for (let i = 0; i < height; i++) {
+    rectangle += (makeLine(width) + '\n');
+  }
+  return rectangle.slice(0,-1);// why we need .slice(0,-1)? the result are printing the same thing. 
+}
+ console.log(makeRectangle(10,4));
+
+// my own writing on make rectangle to create square--NOT WORKING
+
+//  function makeRectangle_2 (width1, height1) {
+//   let rectangle1 =''
+//   for (let i = 0 ; i<height1; i++) {
+//     rectangle1 = (rectangle1 + (makeSquare(width1)))
+//   }
+//   return rectangle1
+//  }
+//  console.log (makeRectangle_2(5,3));
+
+// makeDownwardStairs(height) function--working
+// function makeDownwardStairs(height2){
+// let downwardStar = ''
+// for ( let i = 0; i<height2; i++) {
+//   downwardStar += (makeLine(i+1) + '\n')
+// }
+// return downwardStar.slice(0,-1)
+// }
+// console.log (makeDownwardStairs(5));
+
+//makeSpaceLine(numSpaces, numChars) function
+function makeSpeaceLine(numSpaces, numChars) {
+  let space = ''
+  for (let i=0 ; i<numSpaces; i++){
+  space = ( space + numChars + space )
+  }
+  return makeDownwardStairs
+}
+
+console.log(makeDownwardStairs(3))
